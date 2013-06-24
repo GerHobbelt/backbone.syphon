@@ -260,7 +260,7 @@ Backbone.Syphon = (function(Backbone, $, _){
       }
 
       if (_.isArray(value)){
-        keyName += "[]";
+        //keyName += "[]"; This messes up select boxes with multiple values, which store arrays but are keyed by name
         hash[keyName] = value;
       } else if (_.isObject(value)){
         hash = flattenData(config, value, keyName);
